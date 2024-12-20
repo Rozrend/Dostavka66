@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osh Shaurma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Osh Shaurma</h1>
+        <p>Самая вкусная шаурма в городе!</p>
+    </header>
+    <main>
+        <h2>Меню</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <h3>Шаурма классическая</h3>
+                <p>Цена: 200 руб.</p>
+                <button onclick="addToCart('Шаурма классическая', 200)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Шаурма с сыром</h3>
+                <p>Цена: 250 руб.</p>
+                <button onclick="addToCart('Шаурма с сыром', 250)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Шаурма острая</h3>
+                <p>Цена: 230 руб.</p>
+                <button onclick="addToCart('Шаурма острая', 230)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Шаурма XXL</h3>
+                <p>Цена: 300 руб.</p>
+                <button onclick="addToCart('Шаурма XXL', 300)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Шаурма с грибами</h3>
+                <p>Цена: 270 руб.</p>
+                <button onclick="addToCart('Шаурма с грибами', 270)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Шаурма в лаваше</h3>
+                <p>Цена: 220 руб.</p>
+                <button onclick="addToCart('Шаурма в лаваше', 220)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Картофель фри</h3>
+                <p>Цена: 120 руб.</p>
+                <button onclick="addToCart('Картофель фри', 120)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Салат Цезарь</h3>
+                <p>Цена: 180 руб.</p>
+                <button onclick="addToCart('Салат Цезарь', 180)">Заказать</button>
+            </div>
+            <div class="menu-item">
+                <h3>Напиток (кола/сок)</h3>
+                <p>Цена: 80 руб.</p>
+                <button onclick="addToCart('Напиток (кола/сок)', 80)">Заказать</button>
+            </div>
+        </div>
+        <h2>Корзина</h2>
+        <div id="cart"></div>
+        <div class="checkout-form">
+            <h3>Адрес доставки</h3>
+            <input type="text" id="address" placeholder="Введите адрес" required>
+            <h3>Выбор оплаты</h3>
+            <select id="payment-method" required>
+                <option value="cash">Наличные</option>
+                <option value="card">Банковская карта</option>
+            </select>
+        </div>
+        <button id="checkout" onclick="checkout()" disabled>Оформить заказ</button>
+    </main>
+    <footer>
+        <p>© 2024 Osh Shaurma. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
